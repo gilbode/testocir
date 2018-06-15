@@ -1,0 +1,14 @@
+box:
+  id: alpine
+  cmd: /bin/sh
+build:
+  steps:
+    - script:
+        code: |
+          echo 'hi from alpine'
+    - internal/docker-push:
+        username: odx-pipelines/mike.gilbode@oracle.com
+        password: $PASSWORD
+        tag: latest
+        repository: odx-pipelines/miketest
+        registry: https://iad.ocir.io/v2
