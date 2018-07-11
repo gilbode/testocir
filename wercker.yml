@@ -5,6 +5,7 @@ build:
   steps:
     - script:
         code: |
+          env
           echo 'hi from alpine'
     - internal/docker-push:
         username: odx-pipelines/mike.gilbode@oracle.com
