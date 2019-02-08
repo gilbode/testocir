@@ -6,6 +6,7 @@ build:
     - script:
         code: |
           echo 'hi from alpine'
+          git --version
     - internal/docker-push:
         username: odx-pipelines/mike.gilbode@oracle.com
         password: $PASSWORD
